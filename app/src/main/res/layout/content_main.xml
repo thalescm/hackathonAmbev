@@ -165,32 +165,32 @@
                 <ImageView
                     android:layout_width="44dp"
                     android:layout_height="44dp"
-                    android:src="@drawable/celebration_green"/>
+                    android:src="@drawable/mood_brothers_green"/>
 
                 <ImageView
                     android:layout_marginLeft="18dp"
                     android:layout_width="44dp"
                     android:layout_height="44dp"
-                    android:src="@drawable/music_green"/>
+                    android:src="@drawable/mood_music_green"/>
 
                 <ImageView
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="24dp"
                     android:layout_width="44dp"
                     android:layout_height="44dp"
-                    android:src="@drawable/televisions_green"/>
+                    android:src="@drawable/mood_soccer_green"/>
 
                 <ImageView
                     android:layout_marginLeft="24dp"
                     android:layout_width="44dp"
                     android:layout_height="44dp"
-                    android:src="@drawable/parking_red"/>
+                    android:src="@drawable/mood_park_red"/>
 
                 <ImageView
                     android:layout_marginLeft="18dp"
                     android:layout_width="44dp"
                     android:layout_height="44dp"
-                    android:src="@drawable/plate_red"/>
+                    android:src="@drawable/mood_food_red"/>
 
             </LinearLayout>
 
