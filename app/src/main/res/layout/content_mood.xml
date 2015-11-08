@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main"
+    tools:context=".MainActivity">
+
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginBottom="24dp"-->
+        <!-->-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                android:fontFamily="sans-serif-thin"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:text="Hoje eu quero"/>
+
+
+            <LinearLayout
+                android:paddingTop="20dp"
+                android:paddingLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_centerInParent="true"
+                        android:layout_width="86dp"
+                        android:layout_height="86dp"
+                        android:background="@drawable/white_circle_action"/>
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/mood_dare_green"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_centerInParent="true"
+                        android:layout_width="86dp"
+                        android:layout_height="86dp"
+                        android:background="@drawable/white_circle_action"/>
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/mood_dare_green"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <!--<View-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0.5dp"-->
+                <!--android:background="#ffffff"/>-->
+
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:gravity="center_horizontal"
+                android:fontFamily="sans-serif-thin"
+                android:textColor="#212121"
+                android:text="Com direito a"/>
+            <!--<View-->
+                <!--android:layout_marginBottom="16dp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0.5dp"-->
+                <!--android:background="#ffffff"/>-->
+
+
+
+            <LinearLayout
+                android:paddingTop="28dp"
+                android:paddingLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_centerInParent="true"
+                        android:layout_width="86dp"
+                        android:layout_height="86dp"
+                        android:background="@drawable/white_circle_action"/>
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/mood_dare_green"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_centerInParent="true"
+                        android:layout_width="86dp"
+                        android:layout_height="86dp"
+                        android:background="@drawable/white_circle_action"/>
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/mood_dare_green"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_centerInParent="true"
+                        android:layout_width="86dp"
+                        android:layout_height="86dp"
+                        android:background="@drawable/white_circle_action"/>
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/mood_dare_green"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="44dp"
+                android:paddingBottom="24dp"
+                android:paddingLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_centerInParent="true"
+                        android:layout_width="86dp"
+                        android:layout_height="86dp"
+                        android:background="@drawable/white_circle_action"/>
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/mood_dare_green"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_centerInParent="true"
+                        android:layout_width="86dp"
+                        android:layout_height="86dp"
+                        android:background="@drawable/white_circle_action"/>
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/mood_dare_green"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_centerInParent="true"
+                        android:layout_width="86dp"
+                        android:layout_height="86dp"
+                        android:background="@drawable/white_circle_action"/>
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/mood_dare_green"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_margin="16dp"
+                android:background="@color/colorPrimary"
+                android:fontFamily="sans-serif-thin"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="Ache meu bar"/>
+
+        </LinearLayout>
+
+    <!--</android.support.v7.widget.CardView>-->
+</RelativeLayout>

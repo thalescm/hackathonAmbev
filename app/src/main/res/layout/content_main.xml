@@ -16,6 +16,7 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="24dp"
         >
 
         <LinearLayout
@@ -99,33 +100,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@drawable/drink30"/>
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@drawable/drink30"/>
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@drawable/drink30"/>
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@drawable/drink30"/>
-
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="horizontal"
-                    android:gravity="right|center_vertical">
+                    android:gravity="left|center_vertical">
 
                     <TextView
-                        android:layout_gravity="right|center_vertical"
-                        android:layout_marginLeft="16dp"
+                        android:layout_gravity="left|center_vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-thin"
@@ -134,7 +117,7 @@
                         android:text="Breja a partir de "/>
 
                     <TextView
-                        android:layout_gravity="right|center_vertical"
+                        android:layout_gravity="left|center_vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
@@ -145,12 +128,70 @@
 
                 </LinearLayout>
 
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/drink30"/>
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/drink30"/>
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/drink30"/>
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/drink30"/>
+
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:background="#BDBDBD"/>
+
+            <LinearLayout
+                android:paddingTop="20dp"
+                android:paddingLeft="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/celebration_green"/>
+
+                <ImageView
+                    android:layout_marginLeft="18dp"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/music_green"/>
+
+                <ImageView
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/televisions_green"/>
+
+                <ImageView
+                    android:layout_marginLeft="24dp"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/parking_red"/>
+
+                <ImageView
+                    android:layout_marginLeft="18dp"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/plate_red"/>
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
