@@ -1,17 +1,23 @@
 package com.ambev.hackambev;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import com.ambev.hackambev.bar.BarDetailActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -25,9 +31,11 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.toolbar)
     Toolbar mToolbar;
 
+    @Bind(R.id.bar_card)
+    CardView barCard;
 
     @Override
-    protected void onCreate (Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
@@ -41,7 +49,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public void onBackPressed () {
+    public void onBackPressed() {
         if (mDraweLayout.isDrawerOpen(GravityCompat.START)) {
             mDraweLayout.closeDrawer(GravityCompat.START);
         } else {
@@ -50,14 +58,14 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public boolean onCreateOptionsMenu (Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected (MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
@@ -73,7 +81,7 @@ public class MainActivity extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected (MenuItem item) {
+    public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
@@ -93,5 +101,11 @@ public class MainActivity extends AppCompatActivity
 
         mDraweLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @OnClick(R.id.bar_card)
+    public void onClickBarDetail(View view) {
+        Intent intent = new Intent(getApplicationContext(), BarDetailActivity.class);
+        startActivity(intent);
     }
 }
