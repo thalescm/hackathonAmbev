@@ -1,10 +1,11 @@
 package com.ambev.hackambev.bar;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -40,20 +41,9 @@ public class BarDetailActivity extends AppCompatActivity
         ButterKnife.bind(this);
 
         setSupportActionBar(mToolbar);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, mDraweLayout, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        mDraweLayout.setDrawerListener(toggle);
-        toggle.syncState();
-        mNavigationView.setNavigationItemSelectedListener(this);
-    }
 
-    @Override
-    public void onBackPressed() {
-        if (mDraweLayout.isDrawerOpen(GravityCompat.START)) {
-            mDraweLayout.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mNavigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
@@ -73,6 +63,9 @@ public class BarDetailActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }
+        if (id == android.R.id.home) {
+            onBackPressed();
         }
 
         return super.onOptionsItemSelected(item);
@@ -104,8 +97,8 @@ public class BarDetailActivity extends AppCompatActivity
 
     @OnClick(R.id.me_leve)
     public void onClickBarDetail(View view) {
-//        final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?" + "saddr=" + latitude + "," + longitude + "&daddr=" + latitude + "," + longitude));
-//        intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
-//        startActivity(intent);
+        final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com.br/maps/dir/Ballroom+-+Rua+Estados+Unidos,+1570+-+Jardim+Paulista,+S%C3%A3o+Paulo+-+SP,+01412-100/Vila+Madalena,+S%C3%A3o+Paulo+-+State+of+S%C3%A3o+Paulo/@-23.5586979,-46.6920616,15z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x94ce59d64421f811:0xcbf2cb6d9ecbd226!2m2!1d-46.6690183!2d-23.566441!1m5!1m1!1s0x94ce57be69847fa9:0xd423d197dd9d1e01!2m2!1d-46.6975656!2d-23.5514369?hl=en"));
+        intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
+        startActivity(intent);
     }
 }
