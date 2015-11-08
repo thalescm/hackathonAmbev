@@ -34,9 +34,10 @@ public class UserProvider extends BaseProvider {
         });
     }
 
-    public void createUser(String email, String password, final ConnectionCallback<User> callback) {
+    public void createUser(String name, String email, String password, final ConnectionCallback<User> callback) {
 
         User user = new User();
+        user.name = name;
         user.email = email;
         user.password = password;
         getConnector().createUser(user).enqueue(new Callback<User>() {
@@ -45,7 +46,10 @@ public class UserProvider extends BaseProvider {
 
                 try {
                     checkResponse(response);
-                    callback.onSuccess(response.body());
+                    if (response.body() != null) {
+                        response.body().save();
+                        callback.onSuccess(response.body());
+                    }
                 } catch (ConnectionError connectionError) {
                     callback.onFailure(connectionError.getMessage());
                 }

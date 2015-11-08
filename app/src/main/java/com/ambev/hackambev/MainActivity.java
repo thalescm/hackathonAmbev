@@ -11,10 +11,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
-import com.ambev.hackambev.data.connection.ConnectionCallback;
 import com.ambev.hackambev.data.models.User;
-import com.ambev.hackambev.data.providers.UserProvider;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -32,24 +31,33 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.toolbar)
     Toolbar mToolbar;
 
+    @Bind(R.id.user)
+    TextView userTextView;
+
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        UserProvider provider = new UserProvider();
-        provider.createUser("thales.machado@gmail.com", "1234", new ConnectionCallback<User>() {
-            @Override
-            public void onSuccess (User response) {
+        if (User.getDefault() != null) {
+            userTextView.setText("Bem vindo, " + User.getDefault().name);
+        } else {
+            userTextView.setText("Usuário não esta logado");
+        }
 
-            }
-
-            @Override
-            public void onFailure (String message) {
-
-            }
-        });
+//        UserProvider provider = new UserProvider();
+//        provider.createUser("Thales Machado", "thales.mchd@gmail.com", "1234", new ConnectionCallback<User>() {
+//            @Override
+//            public void onSuccess (User response) {
+//
+//            }
+//
+//            @Override
+//            public void onFailure (String message) {
+//
+//            }
+//        });
 
         setSupportActionBar(mToolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

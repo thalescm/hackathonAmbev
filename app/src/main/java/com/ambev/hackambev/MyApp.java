@@ -2,6 +2,7 @@ package com.ambev.hackambev;
 
 import android.app.Application;
 
+import com.ambev.hackambev.data.cache.Cache;
 import com.ambev.hackambev.data.connection.Connector;
 
 /**
@@ -13,7 +14,6 @@ public class MyApp extends Application {
     public void onCreate () {
         super.onCreate();
         Connector.initialize();
-
-
+        Cache.initialize(this);
     }
 }
