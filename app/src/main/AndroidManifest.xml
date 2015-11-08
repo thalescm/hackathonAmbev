@@ -18,6 +18,10 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
+            android:name=".bar.BarDetailActivity"
+            android:label="@string/bar_detail_activity_name"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".LoadingActivity"
             android:label="@string/title_activity_loading">
             <intent-filter>

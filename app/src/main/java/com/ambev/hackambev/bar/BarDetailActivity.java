@@ -1,9 +1,7 @@
-package com.ambev.hackambev;
+package com.ambev.hackambev.bar;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -11,18 +9,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Button;
 
-import com.ambev.hackambev.bar.BarDetailActivity;
-import com.ambev.hackambev.data.models.User;
+import com.ambev.hackambev.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity
+public class BarDetailActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Bind(R.id.drawer_layout)
@@ -34,37 +27,11 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.toolbar)
     Toolbar mToolbar;
 
-    @Bind(R.id.user)
-    TextView userTextView;
-
-
-    @Bind(R.id.bt_detail)
-    Button mButton;
-
     @Override
-    protected void onCreate (Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.bar_detail_activity);
         ButterKnife.bind(this);
-
-        if (User.getDefault() != null) {
-            userTextView.setText("Bem vindo, " + User.getDefault().name);
-        } else {
-            userTextView.setText("Usuário não esta logado");
-        }
-
-//        UserProvider provider = new UserProvider();
-//        provider.createUser("Thales Machado", "thales.mchd@gmail.com", "1234", new ConnectionCallback<User>() {
-//            @Override
-//            public void onSuccess (User response) {
-//
-//            }
-//
-//            @Override
-//            public void onFailure (String message) {
-//
-//            }
-//        });
 
         setSupportActionBar(mToolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -74,21 +41,8 @@ public class MainActivity extends AppCompatActivity
         mNavigationView.setNavigationItemSelectedListener(this);
     }
 
-    @OnClick(R.id.fab)
-    public void replaceAction(View view) {
-        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show();
-    }
-
-
-    @OnClick(R.id.bt_detail)
-    public void onClickBarDetail(View view) {
-        Intent intent = new Intent(getApplicationContext(), BarDetailActivity.class);
-        startActivity(intent);
-    }
-
     @Override
-    public void onBackPressed () {
+    public void onBackPressed() {
         if (mDraweLayout.isDrawerOpen(GravityCompat.START)) {
             mDraweLayout.closeDrawer(GravityCompat.START);
         } else {
@@ -97,14 +51,14 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public boolean onCreateOptionsMenu (Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected (MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
@@ -120,7 +74,7 @@ public class MainActivity extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected (MenuItem item) {
+    public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 

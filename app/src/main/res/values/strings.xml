@@ -8,4 +8,5 @@
     <string name="title_activity_loading">LoadingActivity</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="bar_detail_activity_name">Bar Detail</string>
 </resources>
