@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Hackambev.iml" filepath="$PROJECT_DIR$/Hackambev.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hackathonAmbev.iml" filepath="$PROJECT_DIR$/hackathonAmbev.iml" />
     </modules>
   </component>
 </project>
