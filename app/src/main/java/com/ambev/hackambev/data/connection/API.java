@@ -1,5 +1,6 @@
 package com.ambev.hackambev.data.connection;
 
+import com.ambev.hackambev.data.models.Bar;
 import com.ambev.hackambev.data.models.User;
 
 import retrofit.Call;
@@ -18,4 +19,6 @@ public interface API {
     @POST("/users")
     Call<User> createUser(@Body User user);
 
+    @GET("/posts/1")
+    Call<Bar> getBar();
 }

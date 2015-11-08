@@ -9,11 +9,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.ambev.hackambev.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class BarDetailActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -26,6 +29,9 @@ public class BarDetailActivity extends AppCompatActivity
 
     @Bind(R.id.toolbar)
     Toolbar mToolbar;
+
+    @Bind(R.id.me_leve)
+    Button mMeLeve;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,5 +100,12 @@ public class BarDetailActivity extends AppCompatActivity
 
         mDraweLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @OnClick(R.id.me_leve)
+    public void onClickBarDetail(View view) {
+//        final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?" + "saddr=" + latitude + "," + longitude + "&daddr=" + latitude + "," + longitude));
+//        intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
+//        startActivity(intent);
     }
 }
