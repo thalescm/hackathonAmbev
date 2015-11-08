@@ -1,9 +1,6 @@
 package com.ambev.hackambev.data.providers;
 
-import android.util.Log;
-
 import com.ambev.hackambev.data.connection.ConnectionCallback;
-import com.ambev.hackambev.data.connection.Connector;
 import com.ambev.hackambev.data.models.User;
 
 import retrofit.Callback;
@@ -12,21 +9,51 @@ import retrofit.Retrofit;
 
 /**
  * Created by thalesmachado on 11/8/15.
+ *
  */
-public class UserProvider {
+public class UserProvider extends BaseProvider {
 
-    public void getUser(ConnectionCallback<User> callback) {
+    public void getUser(final ConnectionCallback<User> callback) {
 
-        Connector.getConnector().getUser().enqueue(new Callback<User>() {
+        getConnector().getUser().enqueue(new Callback<User>() {
             @Override
             public void onResponse (Response<User> response, Retrofit retrofit) {
-                Log.d("CODE", String.valueOf(response.code()));
-                Log.d("USER", response.body().body);
+
+                try {
+                    checkResponse(response);
+                    callback.onSuccess(response.body());
+                } catch (ConnectionError connectionError) {
+                    callback.onFailure(connectionError.getMessage());
+                }
             }
 
             @Override
             public void onFailure (Throwable t) {
-                Log.d("ERROR", "deu ruim");
+                callback.onFailure(BaseProvider.ConnectionError.getDefaultErrorMessage());
+            }
+        });
+    }
+
+    public void createUser(String email, String password, final ConnectionCallback<User> callback) {
+
+        User user = new User();
+        user.email = email;
+        user.password = password;
+        getConnector().createUser(user).enqueue(new Callback<User>() {
+            @Override
+            public void onResponse (Response<User> response, Retrofit retrofit) {
+                
+                try {
+                    checkResponse(response);
+                    callback.onSuccess(response.body());
+                } catch (ConnectionError connectionError) {
+                    callback.onFailure(connectionError.getMessage());
+                }
+            }
+
+            @Override
+            public void onFailure (Throwable t) {
+                callback.onFailure(BaseProvider.ConnectionError.getDefaultErrorMessage());
             }
         });
     }

@@ -7,8 +7,8 @@ import java.io.Serializable;
  */
 public class User implements Serializable {
 
-    public String userId;
+    public String name;
     public int id;
-    public String  title;
-    public String body;
+    public String  email;
+    public String password;
 }

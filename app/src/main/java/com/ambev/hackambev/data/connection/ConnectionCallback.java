@@ -7,6 +7,6 @@ import java.io.Serializable;
  */
 public interface ConnectionCallback<T extends Serializable> {
 
-    public void onSuccess(T response);
-    public void onFailure(int status, String message);
+    void onSuccess (T response);
+    void onFailure (String message);
 }
