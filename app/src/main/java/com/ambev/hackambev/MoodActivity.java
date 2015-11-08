@@ -38,6 +38,35 @@ public class MoodActivity extends AppCompatActivity {
     @OnClick(R.id.brothersRL)
     public void cheangeBrothers(View view) {
         brothersI.setImageResource(brotherArray[++brotherCT % 3]);
+
+        if (brotherCT == 1 && crowdCT == 0 &&
+                soccerCT == 0 &&
+                wifiCT == 0 &&
+                musicCT == 0 &&
+                foodCT == 0 &&
+                parkCT == 0) {
+
+            dateCT = 0;
+            dateI.setImageResource(dateArray[dateCT]);
+            crowdI.setImageResource(crowdArray[++crowdCT % 3]);
+            soccerI.setImageResource(soccerArray[++soccerCT % 3]);
+            wifiI.setImageResource(wifiArray[++wifiCT % 3]);
+            musicI.setImageResource(musicArray[++musicCT % 3]);
+
+        } else if (brotherCT == 2 && crowdCT == 1 &&
+                soccerCT == 1 &&
+                wifiCT == 1 &&
+                musicCT == 1 &&
+                foodCT == 0 &&
+                parkCT == 0) {
+
+            dateCT = 0;
+            dateI.setImageResource(dateArray[dateCT]);
+            crowdI.setImageResource(crowdArray[--crowdCT % 3]);
+            soccerI.setImageResource(soccerArray[--soccerCT % 3]);
+            wifiI.setImageResource(wifiArray[--wifiCT % 3]);
+            musicI.setImageResource(musicArray[--musicCT % 3]);
+        }
     }
 
     @Bind(R.id.dateI)
@@ -50,6 +79,33 @@ public class MoodActivity extends AppCompatActivity {
     @OnClick(R.id.dateRL)
     public void cheangeDates(View view) {
         dateI.setImageResource(dateArray[++dateCT % 3]);
+
+        if (dateCT == 1 && crowdCT == 0 &&
+                soccerCT == 0 &&
+                wifiCT == 0 &&
+                musicCT == 0 &&
+                foodCT == 0 &&
+                parkCT == 0) {
+
+            brotherCT = 0;
+            brothersI.setImageResource(brotherArray[brotherCT]);
+            wifiI.setImageResource(wifiArray[++wifiCT % 3]);
+            foodI.setImageResource(foodArray[++foodCT % 3]);
+            parkI.setImageResource(parkArray[++parkCT % 3]);
+
+        } else if (dateCT == 2 && crowdCT == 0 &&
+                soccerCT == 0 &&
+                wifiCT == 1 &&
+                musicCT == 0 &&
+                foodCT == 1 &&
+                parkCT == 1) {
+
+            brotherCT = 0;
+            brothersI.setImageResource(brotherArray[brotherCT]);
+            wifiI.setImageResource(wifiArray[--wifiCT % 3]);
+            foodI.setImageResource(foodArray[--foodCT % 3]);
+            parkI.setImageResource(parkArray[--parkCT % 3]);
+        }
     }
 
     @Bind(R.id.crowdI)
