@@ -50,19 +50,20 @@ public class LoadingActivity extends Activity {
 
         AsyncTask.execute(new Runnable() {
             @Override
-            public void run() {
-                while (mCount < 100 && !isFinishing()) {
+            public void run () {
+
+                while (mCount < 70 && !isFinishing()) {
                     runOnUiThread(new Runnable() {
                         @Override
-                        public void run() {
-                            mLoadingBeer.setImageResource(mBeerAnim[mCount % mBeerAnim.length]);
+                        public void run () {
+                            mLoadingBeer.setImageResource(mBeerAnim[(mCount + 1) % mBeerAnim.length]);
                             mLoadingBeer.invalidate();
                         }
                     });
 
                     mCount++;
                     try {
-                        Thread.sleep(50);
+                        Thread.sleep(70);
                     } catch (InterruptedException e) {
 
                     }

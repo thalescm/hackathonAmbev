@@ -38,7 +38,7 @@
 
     <ImageView
         android:id="@id/loading_beer"
-        android:src="@drawable/drink08"
+        android:src="@drawable/drink30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="12dp"

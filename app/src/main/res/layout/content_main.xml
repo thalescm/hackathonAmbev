@@ -13,16 +13,146 @@
     tools:showIn="@layout/app_bar_main"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/user"
-        android:text="Hello World!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-        
-    <Button
-        android:id="@+id/bt_detail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="teste"
-        android:layout_centerInParent="true"></Button>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:src="@drawable/bar1"/>
+
+            <LinearLayout
+                android:paddingTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_marginLeft="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp"
+                        android:fontFamily="sans-serif-thin"
+                        android:textStyle="bold"
+                        android:textColor="#212121"
+                        android:text="Bar da Vila"/>
+
+                    <TextView
+                        android:layout_marginLeft="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-thin"
+                        android:textSize="20sp"
+                        android:textColor="#212121"
+                        android:text="Rua List It, 13"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:padding="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5">
+
+                    <Button
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textSize="16sp"
+                        android:textColor="#ffffff"
+                        android:text="ME LEVE"
+                        android:background="#8BC34A"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#BDBDBD"/>
+
+            <LinearLayout
+                android:gravity="right|center_vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/drink30"/>
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/drink30"/>
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/drink30"/>
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/drink30"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="right|center_vertical">
+
+                    <TextView
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-thin"
+                        android:textSize="18sp"
+                        android:textColor="#212121"
+                        android:text="Breja a partir de "/>
+
+                    <TextView
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:fontFamily="sans-serif-thin"
+                        android:textStyle="bold"
+                        android:textColor="#212121"
+                        android:text="R$ 4,50"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#BDBDBD"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
 </RelativeLayout>
