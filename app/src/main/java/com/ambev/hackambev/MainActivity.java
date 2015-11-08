@@ -12,6 +12,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.ambev.hackambev.data.connection.ConnectionCallback;
+import com.ambev.hackambev.data.models.User;
 import com.ambev.hackambev.data.providers.UserProvider;
 
 import butterknife.Bind;
@@ -37,7 +39,17 @@ public class MainActivity extends AppCompatActivity
         ButterKnife.bind(this);
 
         UserProvider provider = new UserProvider();
-        provider.getUser(null);
+        provider.createUser("thales.machado@gmail.com", "1234", new ConnectionCallback<User>() {
+            @Override
+            public void onSuccess (User response) {
+
+            }
+
+            @Override
+            public void onFailure (String message) {
+
+            }
+        });
 
         setSupportActionBar(mToolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

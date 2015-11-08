@@ -42,7 +42,7 @@ public class UserProvider extends BaseProvider {
         getConnector().createUser(user).enqueue(new Callback<User>() {
             @Override
             public void onResponse (Response<User> response, Retrofit retrofit) {
-                
+
                 try {
                     checkResponse(response);
                     callback.onSuccess(response.body());

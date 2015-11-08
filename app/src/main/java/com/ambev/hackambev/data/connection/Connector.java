@@ -8,7 +8,7 @@ import retrofit.Retrofit;
  */
 public class Connector {
 
-    public static final String BASE_URL = "http://jsonplaceholder.typicode.com";
+    public static final String BASE_URL = "http://dce1b147.ngrok.io";
 
     static API apiService;
 
