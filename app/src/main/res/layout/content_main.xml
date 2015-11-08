@@ -81,7 +81,7 @@
                         android:fontFamily="sans-serif-condensed"
                         android:textSize="16sp"
                         android:textColor="#ffffff"
-                        android:text="ME LEVE"
+                        android:text="ME LEVE PRO BAR"
                         android:background="#8BC34A"/>
 
                 </LinearLayout>

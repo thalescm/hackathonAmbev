@@ -26,7 +26,6 @@
 
 
             <TextView
-                android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -39,7 +38,6 @@
 
 
             <LinearLayout
-                android:paddingTop="20dp"
                 android:paddingLeft="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -47,6 +45,7 @@
                 android:layout_gravity="center_vertical">
 
                 <RelativeLayout
+                    android:id="@+id/brothersRL"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -54,19 +53,21 @@
 
                     <View
                         android:layout_centerInParent="true"
-                        android:layout_width="86dp"
-                        android:layout_height="86dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:background="@drawable/white_circle_action"/>
 
                     <ImageView
+                        android:id="@+id/brothersI"
                         android:layout_centerInParent="true"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/mood_dare_green"/>
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@drawable/mood_brothers_gray"/>
 
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/dateRL"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -74,14 +75,15 @@
 
                     <View
                         android:layout_centerInParent="true"
-                        android:layout_width="86dp"
-                        android:layout_height="86dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:background="@drawable/white_circle_action"/>
 
                     <ImageView
+                        android:id="@+id/dateI"
                         android:layout_centerInParent="true"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
                         android:src="@drawable/mood_dare_green"/>
 
                 </RelativeLayout>
@@ -89,33 +91,22 @@
 
             </LinearLayout>
 
-            <!--<View-->
-                <!--android:layout_marginTop="16dp"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="0.5dp"-->
-                <!--android:background="#ffffff"/>-->
-
             <TextView
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:padding="2dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:gravity="center_horizontal"
                 android:fontFamily="sans-serif-thin"
+                android:textStyle="bold"
                 android:textColor="#212121"
-                android:text="Com direito a"/>
-            <!--<View-->
-                <!--android:layout_marginBottom="16dp"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="0.5dp"-->
-                <!--android:background="#ffffff"/>-->
-
+                android:text="com direito a"/>
 
 
             <LinearLayout
-                android:paddingTop="28dp"
+                android:paddingTop="12dp"
                 android:paddingLeft="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -123,6 +114,7 @@
                 android:layout_gravity="center_vertical">
 
                 <RelativeLayout
+                    android:id="@+id/crowdRL"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -135,14 +127,16 @@
                         android:background="@drawable/white_circle_action"/>
 
                     <ImageView
+                        android:id="@+id/crowdI"
                         android:layout_centerInParent="true"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/mood_dare_green"/>
+                        android:src="@drawable/mood_crowd_red"/>
 
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/soccerRL"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -155,14 +149,16 @@
                         android:background="@drawable/white_circle_action"/>
 
                     <ImageView
+                        android:id="@+id/soccerI"
                         android:layout_centerInParent="true"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/mood_dare_green"/>
+                        android:src="@drawable/mood_soccer_gray"/>
 
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/wifiRL"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -175,10 +171,11 @@
                         android:background="@drawable/white_circle_action"/>
 
                     <ImageView
+                        android:id="@+id/wifiI"
                         android:layout_centerInParent="true"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/mood_dare_green"/>
+                        android:src="@drawable/mood_wifi_gray"/>
 
                 </RelativeLayout>
 
@@ -186,7 +183,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:paddingTop="44dp"
+                android:paddingTop="12dp"
                 android:paddingBottom="24dp"
                 android:paddingLeft="16dp"
                 android:layout_width="match_parent"
@@ -195,6 +192,7 @@
                 android:layout_gravity="center_vertical">
 
                 <RelativeLayout
+                    android:id="@+id/musicRL"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -207,14 +205,16 @@
                         android:background="@drawable/white_circle_action"/>
 
                     <ImageView
+                        android:id="@+id/musicI"
                         android:layout_centerInParent="true"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/mood_dare_green"/>
+                        android:src="@drawable/mood_music_green"/>
 
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/foodRL"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -227,14 +227,16 @@
                         android:background="@drawable/white_circle_action"/>
 
                     <ImageView
+                        android:id="@+id/foodI"
                         android:layout_centerInParent="true"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/mood_dare_green"/>
+                        android:src="@drawable/mood_food_green"/>
 
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/parkRL"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -247,10 +249,11 @@
                         android:background="@drawable/white_circle_action"/>
 
                     <ImageView
+                        android:id="@+id/foodI"
                         android:layout_centerInParent="true"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/mood_dare_green"/>
+                        android:src="@drawable/mood_park_green"/>
 
                 </RelativeLayout>
 
@@ -258,6 +261,7 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/findBTN"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
                 android:layout_margin="16dp"

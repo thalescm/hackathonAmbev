@@ -9,4 +9,5 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="bar_detail_activity_name">Bar Detail</string>
+    <string name="title_activity_splash">Bar4U</string>
 </resources>
