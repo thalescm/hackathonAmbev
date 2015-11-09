@@ -39,12 +39,12 @@ public class MoodActivity extends AppCompatActivity {
     public void cheangeBrothers(View view) {
         brothersI.setImageResource(brotherArray[++brotherCT % 3]);
 
-        if (brotherCT == 1 && crowdCT == 0 &&
-                soccerCT == 0 &&
-                wifiCT == 0 &&
-                musicCT == 0 &&
-                foodCT == 0 &&
-                parkCT == 0) {
+        if (brotherCT % 3 == 1 && crowdCT % 3 == 0 &&
+                soccerCT % 3 == 0 &&
+                wifiCT % 3 == 0 &&
+                musicCT % 3 == 0 &&
+                foodCT % 3 == 0 &&
+                parkCT % 3 == 0) {
 
             dateCT = 0;
             dateI.setImageResource(dateArray[dateCT]);
@@ -53,12 +53,12 @@ public class MoodActivity extends AppCompatActivity {
             wifiI.setImageResource(wifiArray[++wifiCT % 3]);
             musicI.setImageResource(musicArray[++musicCT % 3]);
 
-        } else if (brotherCT == 2 && crowdCT == 1 &&
-                soccerCT == 1 &&
-                wifiCT == 1 &&
-                musicCT == 1 &&
-                foodCT == 0 &&
-                parkCT == 0) {
+        } else if (brotherCT % 3 == 2 && crowdCT % 3 == 1 &&
+                soccerCT % 3 == 1 &&
+                wifiCT % 3 == 1 &&
+                musicCT % 3 == 1 &&
+                foodCT % 3 == 0 &&
+                parkCT % 3 == 0) {
 
             dateCT = 0;
             dateI.setImageResource(dateArray[dateCT]);
@@ -80,12 +80,12 @@ public class MoodActivity extends AppCompatActivity {
     public void cheangeDates(View view) {
         dateI.setImageResource(dateArray[++dateCT % 3]);
 
-        if (dateCT == 1 && crowdCT == 0 &&
-                soccerCT == 0 &&
-                wifiCT == 0 &&
-                musicCT == 0 &&
-                foodCT == 0 &&
-                parkCT == 0) {
+        if (dateCT == 1 && crowdCT % 3 == 0 &&
+                soccerCT % 3 == 0 &&
+                wifiCT % 3 == 0 &&
+                musicCT % 3 == 0 &&
+                foodCT % 3 == 0 &&
+                parkCT % 3 == 0) {
 
             brotherCT = 0;
             brothersI.setImageResource(brotherArray[brotherCT]);
@@ -93,12 +93,12 @@ public class MoodActivity extends AppCompatActivity {
             foodI.setImageResource(foodArray[++foodCT % 3]);
             parkI.setImageResource(parkArray[++parkCT % 3]);
 
-        } else if (dateCT == 2 && crowdCT == 0 &&
-                soccerCT == 0 &&
-                wifiCT == 1 &&
-                musicCT == 0 &&
-                foodCT == 1 &&
-                parkCT == 1) {
+        } else if (dateCT % 3 == 2 && crowdCT % 3 == 0 &&
+                soccerCT % 3 == 0 &&
+                wifiCT % 3 == 1 &&
+                musicCT % 3 == 0 &&
+                foodCT % 3 == 1 &&
+                parkCT % 3 == 1) {
 
             brotherCT = 0;
             brothersI.setImageResource(brotherArray[brotherCT]);

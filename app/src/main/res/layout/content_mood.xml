@@ -260,10 +260,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
                 android:layout_margin="16dp"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/yellow_button"
                 android:fontFamily="sans-serif-thin"
                 android:textStyle="bold"
                 android:textColor="#ffffff"
+                android:clickable="true"
                 android:text="Ache meu bar"/>
 
         </LinearLayout>
